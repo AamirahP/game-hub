@@ -13,6 +13,7 @@ export interface Game {
     name: string;
     background_image: string;
     parent_platforms: {platform: Platform}[];
+    metacritic: number; 
   }
   
   interface FetchGamesResponse {
@@ -22,7 +23,7 @@ export interface Game {
 
   
 const useGames = () => {
-    const [games, setGames] = useState<Game[]>([]);
+  const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
